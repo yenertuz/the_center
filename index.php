@@ -1,5 +1,6 @@
 <?php session_start(); ?>
 <html>
+<link rel="stylesheet" type="text/css" href="style.css">
 <title> The Center </title>
 <body>
 <form method="post" action="login.php">
