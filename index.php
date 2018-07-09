@@ -2,7 +2,7 @@
 
 include "display_layout.php";
 
-if (!$_SESSION["layout"])
+if (isset($_SESSION["layout"]) == 0)
 {
 	$_SESSION["layout"] = "login";
 }
