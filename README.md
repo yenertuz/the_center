@@ -1,6 +1,6 @@
 # the_center
 
-##FileMaker Programming Challenge
+## FileMaker Programming Challenge
 
 Instructions
 Your task is to use the requirements and specifications in this document as the basis for creating a fully
