@@ -2,16 +2,19 @@
 
 include "display_layout.php";
 
-if (isset($_SESSION["layout"]) == 0)
-{
-	$_SESSION["layout"] = "login";
-}
+check_if_layout_is_set();
 
 ?>
 <html>
 <link rel="stylesheet" type="text/css" href="style.css">
 <title> The Center </title>
 <body>
-<?php display_layout(); ?>
+<?php 
+write_comment("Layout: ".$_SESSION["layout"]);
+display_layout(); 
+
+echo $_SESSION["layout"]."<br>".PHP_EOL;
+
+?>
 </body>
 </html>
