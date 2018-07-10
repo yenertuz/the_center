@@ -35,7 +35,7 @@ function continue_as_guest()
 	exit();
 }
 
-if (isset($_POST["guest"]) && $_POST["guest"] == "guest")
+if (isset($_POST["guest"]) && $_POST["guest"] == "Continue As Guest")
 {
 	continue_as_guest();
 }

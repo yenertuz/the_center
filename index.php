@@ -13,8 +13,6 @@ check_if_layout_is_set();
 write_comment("Layout: ".$_SESSION["layout"]);
 display_layout(); 
 
-echo $_SESSION["layout"]."<br>".PHP_EOL;
-
 ?>
 </body>
 </html>
