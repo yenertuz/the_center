@@ -10,7 +10,7 @@ function try_to_login($username, $password)
 		header("Location: index.php");
 		exit ();
 	}
-	$lines = explode("\n", file_get_contents("/private/accounts"));
+	$lines = explode("\n", file_get_contents("private/accounts"));
 	foreach ($lines as $single_line)
 	{
 		$array = explode("\t", $single_line);

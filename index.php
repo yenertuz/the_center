@@ -1,6 +1,6 @@
 <?php session_start(); 
 
-include "display_layout.php";
+include "install.php";
 
 check_if_layout_is_set();
 
