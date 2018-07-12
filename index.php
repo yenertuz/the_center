@@ -10,7 +10,9 @@ check_if_layout_is_set();
 <title> The Center </title>
 <body>
 <?php 
-write_comment("Layout: ".$_SESSION["layout"]);
+echo "Layout: ".$_SESSION["layout"];
+display_menu();
+
 display_layout(); 
 
 ?>
