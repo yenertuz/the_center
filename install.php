@@ -2,11 +2,11 @@
 
 session_start();
 
-function unset_locals()
+function unset_tmp()
 {
-	if (isset($_SESSION["l"]))
+	if (isset($_SESSION["tmp"]))
 	{
-		unset($_SESSION["l"]);
+		unset($_SESSION["tmp"]);
 	}
 }
 
@@ -34,18 +34,13 @@ function render_html()
 	}
 	$j = json_encode($_SESSION);
 	echo "<!DOCTYPE html><html>\n
-	<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">
-	<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js\"></script>
-<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js\"></script>";
-	if (isset($_SESSION["json"]))
-	{
+	<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">";
 		echo <<<EOD
 <script>
 var json =
 EOD;
 		echo $j.";";
 		echo "</script>\n";
-	}
 	echo file_get_contents($_SESSION["view"].".html");
 	echo "<script>var forms = document.getElementsByTagName(\"form\");
 	var i;
@@ -55,7 +50,7 @@ EOD;
 	}
 	</script>
 	</html>\n";
-	unset_locals();
+	unset_tmp();
 }
 
 function redirect_to_index()
